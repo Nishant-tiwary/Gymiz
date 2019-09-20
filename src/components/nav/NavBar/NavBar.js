@@ -1,0 +1,83 @@
+import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import { Menu, Container } from 'semantic-ui-react';
+import { NavLink, Link, withRouter } from 'react-router-dom';
+import './style.css'
+
+class NavBar extends Component {
+  render() {
+    return (
+<div className="main-header header-transparent sticky-header">
+    <div className="container">
+        <nav className="navbar navbar-expand-lg navbar-light">
+            <a className="navbar-brand logo" href="index.html">
+                <img src="img/logos/logo.png" alt="logo"/>
+            </a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav header-ml">
+                   
+                    <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Explore Gyms
+                        </a>
+                        
+                    </li>
+                    <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Membership Plans
+                        </a>
+                       
+                    </li>
+                    <li className="nav-item dropdown megamenu-li">
+                        <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                       
+                    </li>
+                    <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Help
+                        </a>
+                       
+                    </li>
+                </ul>
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item ">
+                        <a className="nav-link" href="login.html">
+                        <i className="fa fa-sign-out" aria-hidden="true"></i>Sign In
+                        </a>
+                    </li>
+                    
+                </ul>          
+            </div>
+            <div className="navbar-buttons ml-auto d-xl-block d-lg-block">
+                    <ul>
+                        <li>
+                            <div className="dropdown btns">
+                                <a className="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="" alt="avatar"/>
+                                    My Account
+                                </a>
+                                <div className="dropdown-menu">
+                                    <a className="dropdown-item" href="dashboard.html">Dashboard</a>
+                                    <a className="dropdown-item" href="messages.html">Messages</a>
+                                    <a className="dropdown-item" href="bookings.html">Bookings</a>
+                                    <a className="dropdown-item" href="my-profile.html">My profile</a>
+                                    <a className="dropdown-item" href="index.html">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a className="btn btn-theme btn-md" href="add-listing.html">Add Listing</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </div>
+</div>
+    );
+  }
+}
+
+export default NavBar;
